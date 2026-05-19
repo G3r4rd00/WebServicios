@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const REVEAL_THRESHOLD = 0.15;
+  const REVEAL_ROOT_MARGIN = "0px 0px -40px 0px";
   const revealElements = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
@@ -12,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       {
-        threshold: 0.15,
-        rootMargin: "0px 0px -40px 0px"
+        threshold: REVEAL_THRESHOLD,
+        rootMargin: REVEAL_ROOT_MARGIN
       }
     );
 
